@@ -105,6 +105,11 @@ import BlockViewer from '@/components/BlockViewer.vue';
 
 import '@/assets/styles.scss';
 
+import LoadingOverlay from '@/components/loading/LoadingOverlay.vue';
+
+import { i18n } from '@/libs/i18n/index';
+import { createPinia } from 'pinia';
+
 const app = createApp(App);
 
 app.use(router);
@@ -210,5 +215,13 @@ app.component('TreeSelect', TreeSelect);
 app.component('TreeTable', TreeTable);
 app.component('TriStateCheckbox', TriStateCheckbox);
 app.component('VirtualScroller', VirtualScroller);
+
+app.component('LoadingOverlay', LoadingOverlay);
+
+const pinia = createPinia();
+app.use(pinia);
+app.use(i18n);
+
+// export const useGlobals = () => app.config.globalProperties;s
 
 app.mount('#app');

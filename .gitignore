@@ -13,6 +13,7 @@ dist
 dist-ssr
 coverage
 *.local
+*.firebase
 
 /cypress/videos/
 /cypress/screenshots/
@@ -34,3 +35,5 @@ public/themes/viva-light/
 public/themes/viva-dark/
 public/themes/mira/
 public/themes/nano/
+
+*.env*
